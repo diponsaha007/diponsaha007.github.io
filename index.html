@@ -2,1046 +2,792 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Apurba's Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/3d-avatar-male_lg.webp" type="image/x-icon">
+  <!-- Favicons -->
+  <link href="assets/img/3d-avatar-male_lg.webp" rel="icon">
+  <link href="assets/img/3d-avatar-male_lg.webp" rel="apple-touch-icon">
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="index-page">
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
 
-  <!--
-    - #MAIN
-  -->
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
+    </div>
 
-  <main>
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Apurba Saha</h1>
+    </a>
 
-    <!--
-      - #SIDEBAR
-    -->
+    <div class="social-links text-center">
+      <a href="https://github.com/diponsaha007" class="social-link" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/icons8-github.svg" style="width: 18px; height: 18px;">
+      </a>
+      <a href="https://www.linkedin.com/in/apurba-saha-693a88146" class="social-link" target="_blank"
+        rel="noopener noreferrer">
+        <img src="assets/img/icons8-linkedin.svg" style="width: 18px; height: 18px;">
+      </a>
+      <a href="https://codeforces.com/profile/Roll_Num_56" class="social-link" target="_blank"
+        rel="noopener noreferrer">
+        <img src="assets/img/code-forces.svg" style="width: 18px; height: 18px;">
+      </a>
+      <a href="https://icpc.global/ICPCID/4K0OOWSUTXTE" style="margin-top: 10px" class="social-link" target="_blank"
+        rel="noopener noreferrer">
+        <img src="assets/img/icpc.svg" style="width: 18px; height: 18px;">
+      </a>
+    </div>
 
-    <aside class="sidebar" data-sidebar>
-      <div class="sidebar-info">
-        <figure class="avatar-box">
-          <img src="./assets/images/my-profile-img.jpg" alt="Apurba Saha" width="80">
-        </figure>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#about" class="active"><i class="bi bi-person navicon"></i>About</a></li>
+        <li><a href="#education"><i class="bi bi-book navicon"></i>Education</a></li>
+        <li><a href="#achievements"><i class="bi bi-trophy navicon"></i>Achievements</a></li>
+        <li><a href="#experience"><i class="bi bi-briefcase navicon"></i>Experience</a></li>
+        <li><a href="#projects"><i class="bi bi-diagram-3 navicon"></i>Projects</a></li>
+        <li><a href="#research"><i class="bi bi-journal navicon"></i>Research</a></li>
+        <li><a href="#lessons"><i class="bi-person-arms-up navicon"></i>Lessons</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <div class="info-content">
-          <h1 class="name" title="Apurba Saha">Apurba Saha</h1>
-          <!-- <p class="title">
-            Software Engineer, Chaldal
-            <br>
-            2023 - Present
-          </p> -->
-          
+  <main class="main">
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-4">
+              <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-8 content">
+              <h2>Software Engineer &amp; Former Competitive Programmer</h2>
+              <p>
+                Hello, I'm Apurba Saha. I'm currently working as a <b>Software Engineer - Level 3</b> at <a
+                  href="https://chaldal.tech/" target="_blank">Chaldal</a>. I completed my undergraduate degree in
+                <b>Computer Science and
+                  Engineering</b> from <a href="https://www.buet.ac.bd/web/#/" target="_blank">BUET</a> in 2023. I have
+                over <b>5 years</b> of experience working on various projects and more than <b>1 year</b> of
+                professional experience.
+              </p>
+              <br>
+              <p>
+                I am passionate about problem-solving and competitive programming. During my undergraduate years, I
+                participated in various programming contests and hackathons, including the <b>45th ICPC World Finals</b>
+                in <b>Dhaka, Bangladesh</b>, and the <b>47th ICPC World Finals</b> in <b>Luxor, Egypt</b>. I am rated
+                <b>Master</b> in <b>Codeforces</b>.
+                Competitive programming has significantly improved my critical thinking and problem-solving abilities.
+              </p>
+              <br>
+              <p>
+                I have previously worked on theoretical computer science research to solve the <b>Parameterized String
+                  Matching with Mismatch Tolerance</b> problem. My areas of interest in research are <b>Algorithms</b>
+                and <b>Systems</b>, including <b>Distributed Systems</b>, <b>Databases</b> and <b>Operating Systems</b>.
+              </p>
+              <br>
+              <p>
+                I am currently exploring <b>Large Scale System Design</b>, <b>Distributed Systems</b> and <b>Kernel
+                  Programming</b>. I love designing and building complex systems and feel fortunate to witness the
+                advancement of technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Education Section -->
+    <section id="education" class="resume section light-background">
+      <!-- Education Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Education</h2>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="resume-item">
+          <div class="education-header">
+            <h4>B.Sc. in Computer Science and Engineering</h4>
+            <h5>March 2018 - May 2023</h5>
+          </div>
+          <div class="education-header">
+            <p><em>Bangladesh University of Engineering and Technology</em></p>
+            <p><em>CGPA: 3.88/4.00</em></p>
+          </div>
+          <p>
+            Awared merit scholarships and been on the Dean's List every academic year. Notable Courses:
+          <div class="multicol-list">
+            <ul>
+              <li>CSE 305 - Computer Architecture</li>
+              <li>CSE 307 - Software Engineering</li>
+              <li>CSE 309 - Compiler Design</li>
+              <li>CSE 313 - Operating Systems</li>
+              <li>CSE 317 - Artificial Intelligence</li>
+              <li>CSE 321 - Computer Networks</li>
+              <li>CSE 405 - Computer Security</li>
+              <li>CSE 409 - Computer Graphics</li>
+              <li>CSE 411 - Simulation and Modeling</li>
+              <li>CSE 453 - High Performance Database Systems</li>
+              <li>CSE 463 - Introduction to Bioinformatics</li>
+              <li>CSE 471 - Machine Learning</li>
+              <li>MATH 245 - Statistics and Probability</li>
+              <li>MATH 247 - Linear Algebra</li>
+            </ul>
+          </div>
+          </p>
+        </div>
+        <div class="resume-item">
+          <div class="education-header">
+            <h4>Higher Secondary School Certificate (HSC)</h4>
+            <h5>2017</h5>
+          </div>
+          <div class="education-header">
+            <p><em>Naogaon Govt. College</em></p>
+            <p><em>GPA: 5.00/5.00</em></p>
+          </div>
+          <p>
+            Received board scholarship.
+          </p>
+        </div>
+        <div class="resume-item">
+          <div class="education-header">
+            <h4>Secondary School Certificate (SSC)</h4>
+            <h5>2015</h5>
+          </div>
+          <div class="education-header">
+            <p><em>Naogaon K.D. Govt. High School</em></p>
+            <p><em>GPA: 5.00/5.00</em></p>
+          </div>
+          <p>
+            Received board scholarship.
+          </p>
+        </div>
+      </div>
+
+    </section><!-- /Education Section -->
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="resume section">
+      <!-- Achievements Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Achievements</h2>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-12">
+              <h3 class="resume-title">International Programming Competitions</h3>
+              <div class="resume-item">
+                <div class="education-header">
+                  <a href="https://icpc.global/regionals/finder/World-Finals-2023/standings" class="social-link"
+                    target="_blank" rel="noopener noreferrer">
+                    <h4>47th ICPC World Finals</h4>
+                  </a>
+                  <h5>Luxor, Egypt</h5>
+                </div>
+                <div class="education-header">
+                  <p><em>Ranked 36th</em></p>
+                  <p><em>April 2024</em></p>
+                </div>
+                <p>
+                  5th in Asia West Continent, 1st in Bangladesh, Time penalty-wise ranking: 65.
+                </p>
+              </div>
+              <div class="resume-item">
+                <div class="education-header">
+                  <a href="https://icpc.global/regionals/finder/World-Finals-2021/standings" class="social-link"
+                    target="_blank" rel="noopener noreferrer">
+                    <h4>45th ICPC World Finals</h4>
+                  </a>
+                  <h5>Dhaka, Bangladesh</h5>
+                </div>
+                <div class="education-header">
+                  <p><em>Ranked 50th</em></p>
+                  <p><em>November 2022</em></p>
+                </div>
+                <p>
+                  3rd in Asia West Continent, 1st in Bangladesh, Time penalty-wise ranking: 51.
+                </p>
+              </div>
+              <div class="resume-item">
+                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/round-3/scoreboard?start=150"
+                  class="social-link" target="_blank" rel="noopener noreferrer">
+                  <h4>Meta Hacker Cup 2023</h4>
+                </a>
+                <div class="education-header">
+                  <p><em>Ranked 180th</em></p>
+                  <p><em>Top 0.8%</em></p>
+                </div>
+                <p>
+                  Participated in round 1, 2 and 3.
+                </p>
+              </div>
+              <div class="resume-item">
+                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2022/round-2/scoreboard?start=350"
+                  class="social-link" target="_blank" rel="noopener noreferrer">
+                  <h4>Meta Hacker Cup 2022</h4>
+                </a>
+                <div class="education-header">
+                  <p><em>Ranked 385th</em></p>
+                  <p><em>Top 1.3%</em></p>
+                </div>
+                <p>
+                  Participated in round 1, 2 and 3.
+                </p>
+              </div>
+              <div class="resume-item">
+                <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2021/round-2/scoreboard?start=400"
+                  class="social-link" target="_blank" rel="noopener noreferrer">
+                  <h4 class="h4 timeline-item-title">Meta Hacker Cup 2021</h4>
+                </a>
+                <div class="education-header">
+                  <p><em>Ranked 449th</em></p>
+                  <p><em>Top 1.3%</em></p>
+                </div>
+                <p>
+                  Participated in round 1, 2 and 3.
+                </p>
+              </div>
+              <br>
+              <h3 class="resume-title">Hackathon</h3>
+              <div class="resume-item pb-0">
+                <div class="education-header">
+                  <h4 class="h4 timeline-item-title">Hackathon : BUET CSE Fest</h4>
+                  <h5>Dhaka, Bangladesh</h5>
+                </div>
+                <div class="education-header">
+                  <p><em>1st Runner-up</em></p>
+                  <p><em>January 2019</em></p>
+                </div>
+                <p>
+                  Our team became the first runner-up in the Cloud Computing category of BUET CSE Fest 2019 Hackathon.
+                  To
+                  see our work:
+                  <a href="https://github.com/zarif98sjs/KichuPariNaChatBot" class="social-link_white" target="_blank">
+                    <p>https://github.com/zarif98sjs/KichuPariNaChatBot</p>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-12">
+              <h3 class="resume-title">Regional Programming Competitions</h3>
+              <div class="resume-item">
+                <div class="education-header">
+                  <a href="https://codedrills.io/contests/icpc-asia-west-continent-final-contest-2022/scoreboard"
+                    class="social-link" target="_blank" rel="noopener noreferrer">
+                    <h4 class="h4 timeline-item-title">ICPC Asia West Continent Finals</h4>
+                  </a>
+                  <h5>Dhaka, Bangladesh</h5>
+                </div>
+                <div class="education-header">
+                  <p><em>Ranked 7th</em></p>
+                  <p><em>May 2023</em></p>
+                </div>
+              </div>
+
+              <div class="resume-item">
+                <div class="education-header">
+                  <h4>ICPC Asia Dhaka Regionals</h4>
+                  <h5>Dhaka, Bangladesh</h5>
+                </div>
+                <div class="education-header">
+                  <p><em>1st Runner-up</em></p>
+                  <p><em>August 2021</em></p>
+                </div>
+              </div>
+
+              <div class="resume-item">
+                <div class="education-header">
+                  <a href="https://icpc.global/regionals/finder/Dhaka-2022/standings" class="social-link"
+                    target="_blank" rel="noopener noreferrer">
+                    <h4>ICPC Asia Dhaka Regionals</h4>
+                  </a>
+                  <h5>Dhaka, Bangladesh</h5>
+                </div>
+                <div class="education-header">
+                  <p><em>Ranked 4th</em></p>
+                  <p><em>October 2022</em></p>
+                </div>
+              </div>
+
+              <div class="resume-item">
+                <div class="education-header">
+                  <h4>ICPC Asia Dhaka Regionals</h4>
+                  <h5>Dhaka, Bangladesh</h5>
+                </div>
+                <div class="education-header">
+                  <p><em>2nd Runner-up</em></p>
+                  <p><em>March 2023</em></p>
+                </div>
+              </div>
+              <br>
+              <h3 class="resume-title">Others</h3>
+              <div class="resume-item">
+                <h4>Dean's list and merit scholarship</h4>
+                <p><em>Bangladesh University of Engineering and Technology</em></p>
+                <p>
+                  Every undergraduate academic years.
+                </p>
+              </div>
+              <div class="resume-item">
+                <h4>Problem Setter and Judge</h4>
+                <p>
+                  Been on the judge panel of Bangladesh Olympiad in Informatics, National Girls
+                  Programming Contest and multiple Inter University Programming Contests.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-      </div>
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/apurba-saha-693a88146" class="social-link" target="_blank" rel="noopener noreferrer">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
+    </section><!-- /Achievements Section -->
 
-          <li class="social-item">
-            <a href="https://github.com/diponsaha007" class="social-link" target="_blank" rel="noopener noreferrer">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://codeforces.com/profile/Roll_Num_56" class="social-link" target="_blank" rel="noopener noreferrer">
-              <img src="assets/images/code-forces.svg" style="width: 18px; height: 18px;">
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://icpc.global/ICPCID/4K0OOWSUTXTE" class="social-link" target="_blank" rel="noopener noreferrer">
-              <img src="assets/images/icpc.svg" style="width: 18px; height: 18px;">
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="separator"></div>
-      <div class="sidebar-info_more">
-        <ul class="contacts-list">
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:diponsaha007@gmail.com" class="contact-link">diponsaha007@gmail.com</a>
-            </div>
-          </li>
-
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-              <a href="tel:+8801776198230" class="contact-link">+8801776198230</a>
-            </div>
-          </li>
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>Dhaka, Bangladesh</address>
-            </div>
-          </li>
-        </ul>
-    </aside>
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <button class="navbar-link active" data-nav-link>About</button>
-          </li>
-          
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Education</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Achievements</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Experience</button>
-          </li>
-          
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Research</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Location</button>
-          </li>
-        </ul>
-      </nav>
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Hello, I'm Apurba Saha. I graduated from Bangladesh University of Engineering and Technology (BUET) with a Bachelor's degree in Computer Science and Engineering (CSE). Currently, I am working as a Software Engineer L3, in the dispatcher and logistics team at Chaldal.
-          </p>
-          <p>
-            I am passionate about problem-solving and competitive programming. During my undergraduate years, I participated in various programming contests and hackathons, including the 45th ICPC World Finals in Dhaka, Bangladesh, and the 47th ICPC World Finals in Luxor, Egypt. Competitive programming has significantly improved my critical thinking and problem-solving abilities.
-          </p>
-          <p>
-            I have previously worked on theoretical computer science research to solve the parameterized string matching problem with a given mismatch tolerance. It is currently under review for publication. My areas of interest in research are algorithms and systems, including distributed systems, databases, and operating systems.
-          </p>
-        </section>
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-          </section>
-
+    <!-- Experience Section -->
+    <section id="experience" class="resume section light-background">
+      <!-- Experience Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Experience</h2>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="education-header">
+          <h3 class="resume-title">Chaldal</h3>
+          <h5>June 2023 - Present</h5>
         </div>
-      </article>
-      
-      <!--
-        - #EDUCATION
-      -->
-      <article class="education" data-page="education">
+        <p>
+          I'm Currently working as a <b>Software Engineer - Level 3</b> in the <b>Logistics and Dispatcher</b> team at
+          <a href="https://chaldal.tech/" target="_blank" rel="noopener noreferrer">Chaldal</a>, a startup based in
+          Bangladesh & California, and the biggest online grocery platform in Bangladesh. My
+          primary goal is to achieve full automation of warehouse and routing operations, eliminating the need for
+          manual interventions. The system uses a <b>Distributed
+            Microservices</b> architecture with <b>.NET (C#/F#)</b> for backend, <b>React</b> for frontend and
+          <b>Python</b> for algorithm services, all managed on our <b>in-house infrastructure</b>. I am involved in
+          designing and building backend systems, research and development of algorithms to optimize delivery processes
+          and also some frontend development for web and mobile applications. Some of my notable works include:
+        <ul>
+          <li> Developed last-mile routing algorithm that assigns routes of multiple orders to a delivery person using
+            techniques such
+            as clustering, TSP, Simulated Annealing, and Tabu Search. This increased the on-time delivery rate from 60%
+            to 80%.
+          </li>
+          <li> Developed automated picking assignment for warehouse pickers that assigns tasks based on task priority
+            and movement allowing parallelization of tasks which improved the on-time dispatch rate from 80% to 99%.
+          </li>
+          <li> Improved travel time estimates by integrating historical traffic data, reducing errors from 90% to 13%.
+          </li>
+          <li> Implemented picker incentive system that considers their daily performance and the predicted duration of
+            tasks, resulting in a 33% improvement in overall picker performance. </li>
+          <li> Developed auditing system for warehouse shelves, reducing product quantity mismatches by 12%. </li>
+        </ul>
+        </p>
+      </div>
 
-        <header>
-            <h2 class="h2 article-title">Education</h2>
-        </header>
+    </section><!-- /Experience Section -->
 
-        <section class="timeline">
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <div class="education-header">
-                <h4 class="h4 timeline-item-title">Bangladesh University of Engineering and Technology</h4>
-                <span>March 2018 - May 2023</span>
-              </div>
-              <div class="education-header">
-                <h5 class="h5 timeline-item-subtitle">B.Sc. in Computer Science and Engineering</h5>
-                <span>CGPA: 3.88/4.00</span>
-              </div>              
-              <p class="timeline-text">
-                Awared merit scholarships and been on the Dean's List every academic year.
-                <br>
-                Notable Courses:
-                <div class="multicol-list">
-                  <ul>
-                    <li><p class="timeline-text">CSE 305 - Computer Architecture</p></li>
-                    <li><p class="timeline-text">CSE 307 - Software Engineering</p></li>
-                    <li><p class="timeline-text">CSE 309 - Compiler Design</p></li>
-                    <li><p class="timeline-text">CSE 313 - Operating Systems</p></li>
-                    <li><p class="timeline-text">CSE 317 - Artificial Intelligence</p></li>
-                    <li><p class="timeline-text">CSE 321 - Computer Networks</p></li>
-                    <li><p class="timeline-text">CSE 405 - Computer Security</p></li>
-                    <li><p class="timeline-text">CSE 409 - Computer Graphics</p></li>
-                    <li><p class="timeline-text">CSE 411 - Simulation and Modeling</p></li>
-                    <li><p class="timeline-text">CSE 453 - High Performance Database Systems</p></li>
-                    <li><p class="timeline-text">CSE 463 - Introduction to Bioinformatics</p></li>
-                    <li><p class="timeline-text">CSE 471 - Machine Learning</p></li>
-                    <li><p class="timeline-text">MATH 245 - Statistics and Probability</p></li>
-                    <li><p class="timeline-text">MATH 247 - Linear Algebra</p></li>
-                  </ul>
-                </div>
-              </p>
-            </li>
+    <!-- Projects Section -->
+    <section id="projects" class="portfolio section">
 
-            <li class="timeline-item">
-              <div class="education-header">
-                <h4 class="h4 timeline-item-title">Naogaon Govt. College</h4>
-                <span>2017</span>
-              </div>
-              <div class="education-header">
-                <h5 class="h5 timeline-item-subtitle">Higher Secondary School Certificate (HSC)</h5>
-                <span>GPA: 5.00/5.00</span>
-              </div>
-              <p class="timeline-text">
-                Received board scholarship.
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <div class="education-header">
-                <h4 class="h4 timeline-item-title">Naogaon K.D. Govt. High School</h4>
-                <span>2015</span>
-              </div>
-              <div class="education-header">
-                <h5 class="h5 timeline-item-subtitle">Secondary School Certificate (SSC)</h5>
-                <span>GPA: 5.00/5.00</span>
-              </div>
-              <p class="timeline-text">
-                Received board scholarship.
-              </p>
-            </li>
-          </ol>
-
-        </section>
-      </article>
-
-      <!--
-        - #ACHIEVEMENTS
-      -->
-      <article class="achievements" data-page="achievements">
-
-        <header>
-          <h2 class="h2 article-title">Achievements</h2>
-        </header>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">International Programming Competitions</h3>
-          </div>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <div class="education-header">
-                <a href="https://icpc.global/regionals/finder/World-Finals-2023/standings" class="social-link" target="_blank" rel="noopener noreferrer">
-                  <h4 class="h4 timeline-item-title">47th ICPC World Finals</h4>
-                </a>
-                <span>Luxor, Egypt</span>
-              </div>
-              <div class="education-header">
-                <span>Ranked 36th</span>
-                <span>April 2024</span>
-              </div>
-              <p class="timeline-text">
-                5th in Asia West Continent, 1st in Bangladesh, Time penalty-wise ranking: 65.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-              <div class="education-header">
-                <a href="https://icpc.global/regionals/finder/World-Finals-2021/standings" class="social-link" target="_blank" rel="noopener noreferrer">
-                  <h4 class="h4 timeline-item-title">45th ICPC World Finals</h4>
-                </a>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-              <div class="education-header">
-                <span>Ranked 50th</span>
-                <span>November 2022</span>
-              </div>
-              <p class="timeline-text">
-                3rd in Asia West Continent, 1st in Bangladesh, Time penalty-wise ranking: 51.
-              </p>
-            </li>
-            
-            <li class="timeline-item">
-              <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2023/round-3/scoreboard?start=150" class="social-link" target="_blank" rel="noopener noreferrer">
-                <h4 class="h4 timeline-item-title">Meta Hacker Cup 2023</h4>
-              </a>
-              <div class="education-header">
-                <span>Ranked 180th</span>
-                <span>Top 0.8%</span>
-              </div>
-              <p class="timeline-text">
-                Participated in round 1, 2 and 3.
-              </p>
-            </li>
-
-            <li class="timeline-item">
-              <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2022/round-2/scoreboard?start=350" class="social-link" target="_blank" rel="noopener noreferrer">
-                <h4 class="h4 timeline-item-title">Meta Hacker Cup 2022</h4>
-              </a>
-              <div class="education-header">
-                <span>Ranked 385th</span>
-                <span>Top 1.3%</span>
-              </div>
-              <p class="timeline-text">
-                Participated in round 1, 2 and 3.
-              </p>
-            </li>
-            
-            <li class="timeline-item">
-              <a href="https://www.facebook.com/codingcompetitions/hacker-cup/2021/round-2/scoreboard?start=400" class="social-link" target="_blank" rel="noopener noreferrer">
-                <h4 class="h4 timeline-item-title">Meta Hacker Cup 2021</h4>
-              </a>
-              <div class="education-header">
-                <span>Ranked 229th</span>
-                <span>Top 1.3%</span>
-              </div>
-              <p class="timeline-text">
-                Participated in round 1, 2 and 3.
-              </p>
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Hackathons</h3>
-          </div>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <div class="education-header">
-                <h4 class="h4 timeline-item-title">Hackathon : BUET CSE Fest</h4>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-              <div class="education-header">
-                <span>1st Runner-up</span>
-                <span>January 2019</span>
-              </div>
-              <p class="timeline-text">
-                Our team became the first runner-up in the Cloud Computing category of BUET CSE Fest 2019 Hackathon. To see our work: 
-                <a href="https://github.com/zarif98sjs/KichuPariNaChatBot" class="social-link_white" target="_blank" rel="noopener noreferrer">
-                  <p class="timeline-text">https://github.com/zarif98sjs/KichuPariNaChatBot</p>
-                </a>
-              </p>
-            </li>
-
-          </ol>
-        </section>
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Regional Programming Competitions</h3>
-          </div>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <div class="education-header">
-                <a href="https://codedrills.io/contests/icpc-asia-west-continent-final-contest-2022/scoreboard" class="social-link" target="_blank" rel="noopener noreferrer">
-                  <h4 class="h4 timeline-item-title">ICPC Asia West Continent Finals</h4>
-                </a>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-              <div class="education-header">
-                <span>Ranked 7th</span>
-                <span>May 2023</span>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="education-header">
-                <a href="https://icpc.global/regionals/finder/World-Finals-2021/standings" class="social-link" target="_blank" rel="noopener noreferrer">
-                  <h4 class="h4 timeline-item-title">ICPC Asia Dhaka Regionals</h4>
-                </a>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-              <div class="education-header">
-                <span>1st Runner-up</span>
-                <span>August 2021</span>
-              </div>
-            </li>
-            
-            <li class="timeline-item">
-              <div class="education-header">
-                  <h4 class="h4 timeline-item-title">ICPC Asia Dhaka Regionals</h4>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-              <div class="education-header">
-                <span>Ranked 4th</span>
-                <span>October 2022</span>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="education-header">
-                <a href="https://icpc.global/regionals/finder/Dhaka-2022/standings" class="social-link" target="_blank" rel="noopener noreferrer">
-                  <h4 class="h4 timeline-item-title">ICPC Asia Dhaka Regionals</h4>
-                </a>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-              <div class="education-header">
-                <span>Ranked 4th</span>
-                <span>October 2022</span>
-              </div>
-            </li>
-
-            <li class="timeline-item">
-              <div class="education-header">
-                <a href="https://icpc.global/regionals/finder/Dhaka-2022/standings" class="social-link" target="_blank" rel="noopener noreferrer">
-                  <h4 class="h4 timeline-item-title">ICPC Asia Dhaka Regionals</h4>
-                </a>
-                <span>Dhaka, Bangladesh</span>
-              </div>
-              <div class="education-header">
-                <span>2nd Runner-up</span>
-                <span>March 2023</span>
-              </div>
-            </li>
-          </ol>
-        </section>
-        
-        
-
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-            <h3 class="h3">Others</h3>
-          </div>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Dean's list and merit scholarship</h4>
-              <h5 class="h5 timeline-item-subtitle">Bangladesh University of Engineering and Technology</h5>
-              <p class="timeline-text">Every undergraduate academic years.</p>
-            </li>
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Problem Setter and Judge</h4>
-              <p class="timeline-text">Been on the judge panel of Bangladesh Olympiad in Informatics, National Girls Programming Contest and multiple Inter University Programming Contests.</p>
-            </li>
-          </ol>
-        </section>
-
-      </article>
-
-      <!--
-        - #EXPERIENCE
-      -->
-      <article class="experience" data-page="experience">
-
-        <header>
-          <h2 class="h2 article-title">Experience</h2>
-        </header>
-
-        <section class="timeline">
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Chaldal (Y-Combinator Startup)</h4>
-              <h5 class="h5 timeline-item-subtitle"> Software Engineer L3</h5>
-              <span>June 2023 - Present</span>
-              <p class="timeline-text-bulletpoint">
-                I am currently working as a software engineer in the Dispatcher and Logistics team at Chaldal, a startup based on Bangladesh & California, and the biggest online grocery platform in Bangladesh. My primary goal is to fully automate warehouse and routing operations, aiming to eliminate manual interventions. The tech stack includes .NET for backend, React for frontend and Python for algorithm services. I am involved in the research and development of algorithms to optimize delivery processes and development of backend and frontend web and mobile applications. Some of my notable works include:
-                <div style="margin-left: 15px;">
-                  <ul>
-                    <li class="circle"><p class="timeline-text-bulletpoint">Developed last-mile routing algorithm that assigns routes of multiple orders to a delivery person using techniques such as clustering, TSP, Simulated Annealing, and Tabu Search. This increased the on-time delivery rate from 60% to 80%.</p></li>
-                    <li class="circle"><p class="timeline-text-bulletpoint">Developed automated picking assignment for warehouse pickers that assigns tasks based on task priority and movement allowing parallelization of tasks which improved the on-time dispatch rate from 80% to 99%.</p></li>
-                    <li class="circle"><p class="timeline-text-bulletpoint">Improved travel time estimates by integrating historical traffic data, reducing errors from 90% to 13%.</p></li>
-                    <li class="circle"><p class="timeline-text-bulletpoint">Implemented picker incentive system that considers their daily performance and the predicted duration of tasks, resulting in a 50% improvement in overall picker performance.</p></li>
-                    <li class="circle"><p class="timeline-text-bulletpoint">Developed auditing for warehouse shelves, reducing product quantity mismatches by 20%.</p></li>
-                  </ul>
-                </div>
-              </p>
-
-            </li>
-          </ol>
-
-        </section>
-      </article>
-
-      <!--
-        - #PROJECTS
-      -->
-      <article class="projects" data-page="projects">
-
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <section class="blog-posts">
           <ul class="blog-posts-list">
-            <li class="blog-post-item">
-              <figure class="blog-banner-box">
-                <img src="./assets/images/Shaako.jpg" alt="Shaako" loading="lazy">
-              </figure>
-                <div class="blog-content">
-                  <div class="blog-header">
-                    <h3 class="h3 blog-item-title">Shaako</h3>
-                    <div class="project-linkes">
-                      <a href="https://github.com/IftekharHakimK/Shaako" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-github"></ion-icon>
-                      </a>
-                      <a href="https://www.youtube.com/watch?v=h7b0vDJqepY" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-youtube"></ion-icon>
-                      </a>
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-lg-4">
+                <li class="blog-post-item">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/img/Shaako.jpg" alt="Shaako" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-header">
+                      <h3>Shaako</h3>
+                      <div class="project-linkes">
+                        <a href="https://github.com/IftekharHakimK/Shaako" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-github" style="font-size: 1.75em;"></i>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=h7b0vDJqepY" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-youtube" style="font-size: 1.75em;"></i>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="blog-meta">
-                    <p class="blog-category">Django, React, React Native, Postgresql</p>
-                    <span class="dot"></span>
-                    <time datetime="2022-02-23">2022</time>
-                  </div>
-
-                  <p class="blog-text">
-                    The goal of the Shaako app is to assist community health workers in diagnosing diseases in rural areas of Bangladesh. There are three separate modules for community health workers, supervisors, and organizations. The organization and supervisors with the web app can manage and educate health workers. Health workers with the mobile app can gather data from patients, diagnose diseases from the given symptoms using a ML model and find the closest hospitals in case of an emergency.
-                  </p>
-
-                </div>
-            </li>
-
-            <li class="blog-post-item">
-              <figure class="blog-banner-box">
-                <img src="./assets/images/pool.jpg" alt="Pool" loading="lazy">
-              </figure>
-                <div class="blog-content">
-                  <div class="blog-header">
-                    <h3 class="h3 blog-item-title">8 Ball Pool</h3>
-                    <div class="project-linkes">
-                      <a href="https://github.com/diponsaha007/8-Ball-Pool" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-github"></ion-icon>
-                      </a>
-                      <a href="https://www.youtube.com/watch?v=odes5xyfx3c" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-youtube"></ion-icon>
-                      </a>
+                    <div class="education-header">
+                      <p>Django, React, React Native, Postgresql</p>
+                      <p>2022</p>
                     </div>
+                    <p class="blog-text">
+                      The goal of the Shaako app is to assist community health workers in diagnosing diseases in rural
+                      areas of Bangladesh. There are three separate modules for community health workers, supervisors,
+                      and
+                      organizations. The organization and supervisors with the web app can manage and educate health
+                      workers. Health workers with the mobile app can gather data from patients, diagnose diseases
+                      from
+                      the given symptoms using a ML model and find the closest hospitals in case of an emergency.
+                    </p>
                   </div>
-                  <div class="blog-meta">
-                    <p class="blog-category">Java, JavaFx, MySQL</p>
-                    <span class="dot"></span>
-                    <time datetime="2022-02-23">2019</time>
-                  </div>
-
-                  <p class="blog-text">
-                    This is a classic multiplayer 8-ball pool game. Players can challenge any other player who is currently online. The game features 3D ball rendering and real-time game updates. All game physics, including ball movement and rotation, are implemented from scratch using Java. Gameplay video can be found on the youtube link.
-                  </p>
-                </div>
-            </li>
-
-            <li class="blog-post-item">
-              <figure class="blog-banner-box">
-                <img src="./assets/images/compiler.jpg" alt="Compiler" loading="lazy">
-              </figure>
-                <div class="blog-content">
-                  <div class="blog-header">
-                    <h3 class="h3 blog-item-title">C Compiler</h3>
-                    <div class="project-linkes">
-                      <a href="https://github.com/diponsaha007/CSE-310-Compiler-Sessional" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-github"></ion-icon>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="blog-meta">
-                    <p class="blog-category">Bison, Yacc, C</p>
-                    <span class="dot"></span>
-                    <time datetime="2022-02-23">2022</time>
-                  </div>
-
-                  <p class="blog-text">
-                    Built a compiler from scratch with modern optimizations for a subset of C language.
-                  </p>
-                </div>
-            </li>
-
-            <li class="blog-post-item">
-              <figure class="blog-banner-box">
-                <img src="./assets/images/ray.bmp" alt="Ray Tracing" loading="lazy">
-              </figure>
-                <div class="blog-content">
-                  <div class="blog-header">
-                    <h3 class="h3 blog-item-title">Ray Tracing</h3>
-                    <div class="project-linkes">
-                      <a href="https://github.com/diponsaha007/CSE-310-Computer-Graphics/tree/main/Offline-3" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-github"></ion-icon>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="blog-meta">
-                    <p class="blog-category"> C++, OpenGL</p>
-                    <span class="dot"></span>
-                    <time datetime="2022-02-23">2022</time>
-                  </div>
-
-                  <p class="blog-text">
-                    A 3D space containing multiple geometric objects with a fully controllable camera. The Phong Lighting Model and Ray Tracing with the Recursive Reflection method were used for accurate lighting and reflections.
-                  </p>
-                </div>
-            </li>
-
-            <li class="blog-post-item">
-              <figure class="blog-banner-box">
-                <img src="./assets/images/image-super-res.png" alt="Image-Super-Res" loading="lazy">
-              </figure>
-                <div class="blog-content">
-                  <div class="blog-header">
-                    <h3 class="h3 blog-item-title">Image Super Resolution</h3>
-                    <div class="project-linkes">
-                      <a href="https://github.com/diponsaha007/Image-Super-Resolution/" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-github"></ion-icon>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="blog-meta">
-                    <p class="blog-category"> Python, Pytorch</p>
-                    <span class="dot"></span>
-                    <time datetime="2022-02-23">2023</time>
-                  </div>
-
-                  <p class="blog-text">
-                    A deep learning model for image super-resolution tasks that can upscale images by 4x while maintaining high quality. The model is trained on the DIV2K dataset and uses a mixture of FSRCNN and Channel Attention with Residual Blocks for better results. Samples can be found in the github repository.
-                  </p>
-                </div>
-            </li>
-
-            <li class="blog-post-item">
-              <figure class="blog-banner-box">
-                <img src="./assets/images/cnn.webp" alt="CNN" loading="lazy">
-              </figure>
-                <div class="blog-content">
-                  <div class="blog-header">
-                    <h3 class="h3 blog-item-title">CNN From Scratch</h3>
-                    <div class="project-linkes">
-                      <a href="https://github.com/diponsaha007/CNN-From-Scratch" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-github"></ion-icon>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="blog-meta">
-                    <p class="blog-category"> Python, Numpy, Pandas</p>
-                    <span class="dot"></span>
-                    <time datetime="2022-02-23">2023</time>
-                  </div>
-
-                  <p class="blog-text">
-                    A Convolutional Neural Network (CNN) implemented from scratch including the forward and backward propagation steps using numpy. The model is trained on a dataset of Bangla handwritten digits and achieves an accuracy of approximately 90% on the test dataset. Lenet architecture was used to train and predict the model.
-                  </p>
-                </div>
-            </li>
-
-            <li class="blog-post-item">
-              <figure class="blog-banner-box">
-                <img src="./assets/images/rokomari.jpg" alt="Rokomari" loading="lazy">
-              </figure>
-                <div class="blog-content">
-                  <div class="blog-header">
-                    <h3 class="h3 blog-item-title">Rokomari</h3>
-                    <div class="project-linkes">
-                      <a href="https://github.com/diponsaha007/Rokomari" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-github"></ion-icon>
-                      </a>
-                      <a href="https://drive.google.com/file/d/1kT5xrP3boF_4M2AfQrCY-J2ZA-fw0Bhf/view" target="_blank" rel="noopener noreferrer">
-                        <ion-icon name="logo-youtube"></ion-icon>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="blog-meta">
-                    <p class="blog-category">Python, Django, Oracle Html, CSS, Javascript</p>
-                    <span class="dot"></span>
-                    <time datetime="2022-02-23">2020</time>
-                  </div>
-
-                  <p class="blog-text">
-                    An e-commerce website for selling books with separate admin and buyer modules. The buyer module gives consumers a simple-to-use interface for browse, purchase, and review books. Viewing Dashboards and catalog management along with order processing can all be done effectively with the help of the admin module.
-                  </p>
-                </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-      <!--
-        - #RESEARCH
-      -->
-      <article class="research" data-page="research">
-
-        <header>
-          <h2 class="h2 article-title">Research</h2>
-        </header>
-
-        <section class="timeline">
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">A New Approach to Parameterized String Matching with Fixed Mismatch Tolerance</h4>
-              <h5 class="h5 timeline-item-subtitle-research"> Undergraduate thesis work, paper in submission</h5>
-              <h5 class="h5 timeline-item-subtitle-research">Co-authors: Iftekhar Hakim Kaowsar, Mahdi Hasnat Siyam, Dr. M. Sohel Rahman (Supervisor)</h5>
-              <h5 class="h5 timeline-item-subtitle-research">String matching, Data structure, FFT</h5>
-              <br>
-              <p class="timeline-text-bulletpoint">
-                In this work, we drew an efficient solution to find matching locations between parameterized text and pattern with fixed mismatch tolerance. Two solutions have been introduced:
-                <br>
-                <br>  
-                <div style="margin-left: 15px;">
-                  <ul>
-                    <li class="circle-research"><p class="timeline-text-bulletpoint-research">one for unit tolerance value</p></li>
-                    <li class="circle-research"><p class="timeline-text-bulletpoint-research">one for the generic case</p></li>
-                  </ul>
-                </div>
-              </p>
-              <br>
-              <p class="timeline-text-bulletpoint">
-                For the first one, we solved it by using Segment Tree data structure, hashing and some insightful observations for transformation of string. For the later, we improved previously known matching solution by incorporating Fast Fourier Transform (FFT). Our solution is also parallelizable on multi-core machine and does not depend on value of tolerance.
-              </p>
-
-            </li>
-          </ol>
-
-        </section>
-      </article>
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
+                </li>
               </div>
 
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+              <div class="col-lg-4">
+                <li class="blog-post-item">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/img/image-super-res.png" alt="Image-Super-Res" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-header">
+                      <h3>Image Super Resolution</h3>
+                      <div class="project-linkes">
+                        <a href="https://github.com/diponsaha007/Image-Super-Resolution/" target="_blank"
+                          rel="noopener noreferrer">
+                          <i class="bi bi-github" style="font-size: 1.75em;"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="education-header">
+                      <p>Python, Pytorch</p>
+                      <p>2023</p>
+                    </div>
+                    <p class="blog-text">
+                      A deep learning model for image super-resolution tasks that can upscale images by 4x while
+                      maintaining high quality. The model is trained on the DIV2K dataset and uses a mixture of FSRCNN
+                      and
+                      Channel Attention with Residual Blocks for better results. Samples can be found in the github
+                      repository.
+                    </p>
                   </div>
+                </li>
+              </div>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+              <div class="col-lg-4">
+                <li class="blog-post-item">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/img/pool.jpg" alt="Pool" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-header">
+                      <h3>8 Ball Pool</h3>
+                      <div class="project-linkes">
+                        <a href="https://github.com/diponsaha007/8-Ball-Pool" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-github" style="font-size: 1.75em;"></i>
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=odes5xyfx3c" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-youtube" style="font-size: 1.75em;"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="education-header">
+                      <p>Java, JavaFx, MySQL</p>
+                      <p>2019</p>
+                    </div>
+                    <p class="blog-text">
+                      This is a classic multiplayer 8-ball pool game. Players can challenge any other player who is
+                      currently online. The game features 3D ball rendering and real-time game updates. All game
+                      physics,
+                      including ball movement and rotation, are implemented from scratch using Java. Gameplay video
+                      can be
+                      found on the youtube link.
+                    </p>
                   </div>
+                </li>
+              </div>
+            </div>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-lg-4">
+                <li class="blog-post-item">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/img/compiler.jpg" alt="Compiler" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-header">
+                      <h3>C Compiler</h3>
+                      <div class="project-linkes">
+                        <a href="https://github.com/diponsaha007/CSE-310-Compiler-Sessional" target="_blank"
+                          rel="noopener noreferrer">
+                          <i class="bi bi-github" style="font-size: 1.75em;"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="education-header">
+                      <p>Bison, Yacc, C</p>
+                      <p>2022</p>
+                    </div>
+                    <p class="blog-text">
+                      Built a compiler from scratch with modern optimizations for a subset of C language.
+                    </p>
                   </div>
+                </li>
+              </div>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+              <div class="col-lg-4">
+                <li class="blog-post-item">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/img/ray.bmp" alt="Ray Tracing" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-header">
+                      <h3>Ray Tracing</h3>
+                      <div class="project-linkes">
+                        <a href="https://github.com/diponsaha007/CSE-310-Computer-Graphics/tree/main/Offline-3"
+                          target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-github" style="font-size: 1.75em;"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="education-header">
+                      <p>C++, OpenGL</p>
+                      <p>2022</p>
+                    </div>
+                    <p class="blog-text">
+                      A 3D space containing multiple geometric objects with a fully controllable camera. The Phong
+                      Lighting Model and Ray Tracing with the Recursive Reflection method were used for accurate
+                      lighting
+                      and reflections.
+                    </p>
                   </div>
+                </li>
+              </div>
 
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+              <div class="col-lg-4">
+                <li class="blog-post-item">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/img/cnn.webp" alt="CNN" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-header">
+                      <h3>CNN From Scratch</h3>
+                      <div class="project-linkes">
+                        <a href="https://github.com/diponsaha007/CNN-From-Scratch" target="_blank"
+                          rel="noopener noreferrer">
+                          <i class="bi bi-github" style="font-size: 1.75em;"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="education-header">
+                      <p>Python, Numpy, Pandas</p>
+                      <p>2023</p>
+                    </div>
+                    <p class="blog-text">
+                      A Convolutional Neural Network (CNN) implemented from scratch including the forward and backward
+                      propagation steps using numpy. The model is trained on a dataset of Bangla handwritten digits
+                      and
+                      achieves an accuracy of approximately 90% on the test dataset. Lenet architecture was used to
+                      train
+                      and predict the model.
+                    </p>
                   </div>
+                </li>
+              </div>
+            </div>
 
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-lg-4">
+                <li class="blog-post-item">
+                  <figure class="blog-banner-box">
+                    <img src="./assets/img/rokomari.jpg" alt="Rokomari" loading="lazy">
+                  </figure>
+                  <div class="blog-content">
+                    <div class="blog-header">
+                      <h3>Rokomari</h3>
+                      <div class="project-linkes">
+                        <a href="https://github.com/diponsaha007/Rokomari" target="_blank" rel="noopener noreferrer">
+                          <i class="bi bi-github" style="font-size: 1.75em;"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1kT5xrP3boF_4M2AfQrCY-J2ZA-fw0Bhf/view" target="_blank"
+                          rel="noopener noreferrer">
+                          <i class="bi bi-youtube" style="font-size: 1.75em;"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="education-header">
+                      <p>Python, Django, Oracle, Html, CSS, Javascript</p>
+                      <p>2020</p>
+                    </div>
+                    <p class="blog-text">
+                      An e-commerce website for selling books with separate admin and buyer modules. The buyer module
+                      gives consumers a simple-to-use interface for browse, purchase, and review books. Viewing
+                      Dashboards
+                      and catalog management along with order processing can all be done effectively with the help of
+                      the
+                      admin module.
+                    </p>
                   </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
+                </li>
+              </div>
+            </div>
           </ul>
-
         </section>
+      </div>
+    </section><!-- /Projects Section -->
 
-      </article>
+    <!-- Research Section -->
+    <section id="research" class="resume section light-background">
+      <!-- Research Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Research</h2>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="resume-title">A New Approach to Parameterized String Matching with Fixed Mismatch Tolerance</h4>
+          <h6 style="color: var(--heading-color); font-weight: 700;"> Undergraduate thesis work</h6>
+          <h6 style="color: var(--heading-color); font-weight: 700;">Co-authors: Iftekhar Hakim Kaowsar, Mahdi Hasnat
+            Siyam, Dr. M.
+            Sohel Rahman (Supervisor)</h6>
+          <h6 style="color: var(--heading-color); font-weight: 700; margin-bottom: 20px;">String matching, Data
+            structure, FFT</h6>
+          <p>
+            In this work, we drew an efficient solution to find matching locations between parameterized text and
+            pattern with fixed mismatch tolerance. Two solutions have been introduced:
+            <br>
+          <div style="margin-left: 15px;">
+            <ul>
+              <li>
+                one for unit tolerance value
+              </li>
+              <li>
+                one for the generic case
+              </li>
+            </ul>
+          </div>
+          </p>
+          <p class="timeline-text-bulletpoint">
+            For the first one, we solved it by using Segment Tree data structure, hashing and some insightful
+            observations for transformation of string. For the later, we improved previously known matching solution by
+            incorporating Fast Fourier Transform (FFT). Our solution is also parallelizable on multi-core machine and
+            does not depend on value of tolerance.
+          </p>
+      </div>
 
-      <!--
-        - #Location
-      -->
+    </section><!-- /Experience Section -->
 
-      <article class="location" data-page="location">
+    <!-- Lessons Section -->
+    <section id="experience" class="resume section">
+      <!-- Lessons Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Lessons</h2>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <p>
+          Here's some things I've learned from my experience over the years:
+        <ul>
+          <li> Murphy's Law: "Anything that can go wrong, will go wrong."
+          </li>
+          <li> Ensuring data consistency across different microservices can be complex. Each piece of data should have a
+            single source of truth, and other services must be able to adapt and stay in sync with that source.
+            Distributed Transactions can be very effective in managing this.
+          </li>
+          <li> In distributed systems, network failures and latency issues are inevitable. Always design for resiliency
+            and plan for retries and fallbacks.
+          </li>
+          <li> Allocate sufficient time for system design rather than diving straight into coding. Designing for unhappy
+            paths is often more challenging than designing for happy paths.
+          </li>
+          <li> Even a rare bug with a probability of 0.001% can occur more frequently than expected with a large number
+            of users. For example, with 10,000 daily users, you might encounter such a bug approximately every 10 days.
+          </li>
+          <li> As the system scales, performance bottlenecks can emerge. Regular profiling can help identify these
+            bottlenecks early and address them effectively.
+          </li>
+        </ul>
+        </p>
+      </div>
 
-        <header>
-          <h2 class="h2 article-title">Location</h2>
-        </header>
+    </section><!-- /Experience Section -->
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443.42186941472215!2d90.39390683199998!3d23.771582769171875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c78ae47ee587%3A0x4a32dea978e57c7b!2sPrime%20plaza!5e0!3m2!1sen!2sbd!4v1719258977306!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              <!-- width="400" height="300" loading="lazy"></iframe> -->
-          </figure>
-        </section>
-      </article>
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>💡 Feel free to reach out to me if you have similar interests and want to discuss opportunities or
+          collaborate.</p>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+          <div class="col-lg-12">
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>Prime Plaza, Road 8, West Nakhalpara, Dhaka, Bangladesh</p>
+                </div>
+              </div><!-- End Info Item -->
 
-    </div>
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call</h3>
+                  <p>+8801776198230</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>diponsaha007@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443.42186941472215!2d90.39390683199998!3d23.771582769171875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c78ae47ee587%3A0x4a32dea978e57c7b!2sPrime%20plaza!5e0!3m2!1sen!2sbd!4v1719258977306!5m2!1sen!2sbd"
+                width=100% height="270px" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Contact Section -->
 
   </main>
 
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
 
