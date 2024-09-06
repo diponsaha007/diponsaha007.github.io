@@ -68,7 +68,7 @@
         <li><a href="#experience"><i class="bi bi-briefcase navicon"></i>Experience</a></li>
         <li><a href="#projects"><i class="bi bi-diagram-3 navicon"></i>Projects</a></li>
         <li><a href="#research"><i class="bi bi-journal navicon"></i>Research</a></li>
-        <li><a href="#lessons"><i class="bi-person-arms-up navicon"></i>Lessons</a></li>
+        <!-- <li><a href="#lessons"><i class="bi-person-arms-up navicon"></i>Lessons</a></li> -->
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
       </ul>
     </nav>
@@ -91,13 +91,14 @@
                   href="https://chaldal.tech/" target="_blank">Chaldal</a>. I completed my undergraduate degree in
                 <b>Computer Science and
                   Engineering</b> from <a href="https://www.buet.ac.bd/web/#/" target="_blank">BUET</a> in 2023. I have
-                over <b>5 years</b> of experience working on various projects and more than <b>1 year</b> of
+                over <b>5 years</b> of experience doing competitive programming and working on various projects and more
+                than <b>1 year</b> of
                 professional experience.
               </p>
               <br>
               <p>
-                I am passionate about problem-solving and competitive programming. During my undergraduate years, I
-                participated in various programming contests and hackathons, including the <b>45th ICPC World Finals</b>
+                During my undergraduate years, I participated in various programming contests and hackathons. I had the
+                honor of representing my country in the <b>45th ICPC World Finals</b>
                 in <b>Dhaka, Bangladesh</b>, and the <b>47th ICPC World Finals</b> in <b>Luxor, Egypt</b>. I am rated
                 <b>Master</b> in <b>Codeforces</b>.
                 Competitive programming has significantly improved my critical thinking and problem-solving abilities.
@@ -106,12 +107,12 @@
               <p>
                 I have previously worked on theoretical computer science research to solve the <b>Parameterized String
                   Matching with Mismatch Tolerance</b> problem. My areas of interest in research are <b>Algorithms</b>
-                and <b>Systems</b>, including <b>Distributed Systems</b>, <b>Databases</b> and <b>Operating Systems</b>.
+                and <b>Systems</b>, including <b>Distributed Systems</b> and <b>Databases</b>.
               </p>
               <br>
               <p>
-                I am currently exploring <b>Large Scale System Design</b>, <b>Distributed Systems</b> and <b>Kernel
-                  Programming</b>. I love designing and building complex systems and feel fortunate to witness the
+                I am currently exploring <b>Distributed Systems</b> and <b>System Design</b>. I enjoy designing and
+                building complex systems and feel fortunate to witness the
                 advancement of technologies.
               </p>
             </div>
@@ -383,27 +384,272 @@
           <a href="https://chaldal.tech/" target="_blank" rel="noopener noreferrer">Chaldal</a>, a startup based in
           Bangladesh & California, and the biggest online grocery platform in Bangladesh. My
           primary goal is to achieve full automation of warehouse and routing operations, eliminating the need for
-          manual interventions. The system uses a <b>Distributed
-            Microservices</b> architecture with <b>.NET (C#/F#)</b> for backend, <b>React</b> for frontend and
-          <b>Python</b> for algorithm services, all managed on our <b>in-house infrastructure</b>. I am involved in
+          manual interventions. The system uses a <b>Distributed</b> architecture with <b>.NET (C#/F#)</b> for backend,
+          <b>React</b> for frontend and
+          <b>Python</b> for algorithm and ML services, all managed on our <b>in-house infrastructure</b>. I am involved
+          in
           designing and building backend systems, research and development of algorithms to optimize delivery processes
-          and also some frontend development for web and mobile applications. Some of my notable works include:
+          and also some frontend development for web and mobile applications. Below I will describe some of the projects
+          that I have worked on.
+        </p>
+
+        <h4><b>Overview</b></h4>
+        <p>
+          When a customer places an order on Chaldal, the order is sent to the <b>Dispatcher</b> and <b>Logistics</b>
+          systems for preparing the order and delivering it to the customer. These two systems as a whole are
+          responsible for the entire delivery process. Dispatcher is responsible for managing the warehouse and
+          assigning tasks to pickers, while Logistics is responsible for assigning routes to delivery persons and
+          ensuring on-time delivery.</p>
+
+        <p>
+          The dispatcher system is comprised of the following components:
+        <ul style="margin-top: -10px;">
+          <li><b>Shelves:</b> Shelves contain the products. All the shelves in the warehouse are uniquely numbered and
+            the system keeps track of the products in each shelf.</li>
+          <li><b>Pickers:</b> Pickers are responsible for picking products from the shelves and preparing the order. The
+            system keeps track of all the pickers in the warehouse, including who is available, their last known
+            location, which task they are on, and the estimated time to complete the task.</li>
+          <li><b>Zones:</b> The warehouse is divided into zones. To keep things simple, we are only going to talk about
+            a single zone called the <b>Dispatch Zone</b>, where the orders are kept after all the products of an order
+            are picked.</li>
+        </ul>
+        </p>
+        <p>
+          The logistics system is the most complicated system in the delivery process and is comprised of the following
+          components:
+        <ul style="margin-top: -10px;">
+          <li><b>Shipments:</b> Shipments are the orders that need to be delivered. The system keeps track of the
+            shipments, including the location of the shipments, the time window of the shipments, the weights and
+            volumes of the shipments, etc.</li>
+          <li><b>Delivery Persons:</b> Delivery persons are responsible for delivering the shipments to the customers.
+            The system keeps track of all the delivery persons, including their location, the time when they will be
+            available at the hub.</li>
+          <li><b>Vehicles:</b> We have 3 types of vehicles: cycle, bike, and van. Each types of vehicles has different
+            capacity constraints.</li>
+        </ul>
+        </p>
+
+        <h4><b>Dispatcher Automatic Task Assignment</b></h4>
+        <p>
         <ul>
+          <li><b>Goal:</b> The goal of this project is to automate the task assignment process for pickers. Before this
+            project, the pickers used to pick tasks manually.<br></li>
+
+          <li><b>Our Work:</b> We developed an algorithm that takes all the tasks that need to be picked, all the
+            pickers that are online including their location and when they will be free from their current task, and
+            assigns tasks to pickers so that high priority orders get dispatched first and also the picker movement is
+            minimized. The algorithm uses a combination of some greedy heuristics and a <b>Min Cost Max Flow
+              Matching</b> algorithm to solve the assignment problem.<br></li>
+
+          <li><b>My Contribution:</b> I was responsible for designing the algorithm, implementing it, integrating it
+            with the existing backend system and also the frontend changes in the <b>Picking App</b> that were required
+            to show the tasks to the pickers.<br></li>
+        </ul>
+        </p>
+
+        <h4><b>Logistics Routing Algorithm</b></h4>
+        <p>
+        <ul>
+          <li><b>Goal:</b> The goal of this project is to assign routes of multiple shipments to a delivery person so
+            that the delivery person can deliver all the orders in the same go. In the previous system, the routes were
+            assigned manually by the dispatcher in charge. The manual assignment is effective for low order volumes, but
+            as the order volume increases, the manual assignment becomes inefficient.<br></li>
+
+          <li>
+            <b>Challenge:</b>
+            The main challenge of this project is that the problem is an <b>NP-Hard</b> problem, and the number of
+            possible routes grows exponentially with the number of shipments. The off-the-shelf algorithms like
+            <b>Google OR-Tools</b> and <b>Gurobi Optimizer</b> were not able to handle the problem. Also, some
+            constraints were very specific to our business and could not be modeled using the off-the-shelf
+            algorithms.<br>
+          </li>
+
+          <li><b>Our Work:</b>
+            <ul>
+              <li><b>Algorithm:</b>
+                We developed a new routing algorithm to fully automate the route assignment process. The algorithm takes
+                all the shipments that need to be delivered, the location of the shipments, the time window of the
+                shipments, the weights and volumes of the shipments, the time when each of the delivery persons will be
+                available at the hub, the vehicles that are available, and the vehicle capacity, and outputs a list of
+                routes. A route consists of an ordered list of shipments and the delivery person who will deliver the
+                shipments. The main objective of the algorithm is to deliver the shipments on time and to minimize the
+                total travel time of all the delivery persons. We used clustering, TSP, Simulated Annealing, Tabu
+                Search, and various neighbor-generating heuristics to achieve this.<br>
+              </li>
+
+              <li><b>Backend:</b>
+                The backend system is responsible for tracking the shipment states, such as whether it's routed or not,
+                and the estimated delivery time if it's routed, etc. It also tracks the delivery person states, like
+                their location and the time when they will be available at the hub. The backend system keeps track of
+                the routes assigned to the delivery persons and the shipments assigned to the routes. It updates the
+                states of the shipments, delivery persons, and vehicles as the delivery persons deliver the
+                shipments.<br>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <b>My Contribution:</b>
+            I was responsible for leading the project, designing the algorithm, implementing it, and integrating it with
+            the existing backend system.
+          </li>
+          <li>
+            <b>Demonstration:</b>
+            Here is a simplified demonstration of the algorithm. All the things shown here are dummy data. The images
+            are from a simulation program that we developed to test and visualize the algorithm results, and also to
+            simulate a total warehouse environment.
+            <div class="images">
+              <figure>
+                <img src="./assets/img/AllShipments.png" alt="All Shipments" />
+                <figcaption><b>Fig 1:</b> All Shipments</figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/Cycle.png" alt="Cycle" />
+                <figcaption><b>Fig 2:</b> Cycle Route</figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/Bike.png" alt="Bike" />
+                <figcaption><b>Fig 3:</b> Bike Route</figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/Van.png" alt="Van" />
+                <figcaption><b>Fig 4:</b> Van Route</figcaption>
+              </figure>
+            </div>
+            <br>
+
+            In the <b>Fig 1</b>, there are 10 shipments shown in black and the warehouse/hub shown in blue. There are 3
+            vehicles available: a cycle, a bike, and a van. The corresponding routes for the vehicles are shown in the
+            next 3 images. The colors in the shipments represent whether the shipment is on time or not. Shipments
+            colored in yellow are early, shipments colored in green are on time, and shipments colored in red are late.
+          </li>
+        </ul>
+        </p>
+
+        <h4><b>ASAP Delivery</b></h4>
+        <ul>
+          <li>
+            <b>
+              Goal:
+            </b>
+            In regular Chaldal orders, the customers are shown some fixed delivery time windows, e.g., (8 am - 10 am, 4
+            pm - 6 pm) for placing orders. These windows are usually at least 1 hour away from the order placing time
+            and it typically takes 2-3 hours to deliver. The goal of ASAP Deliveries is to offer special quick delivery
+            option to customers where they will get the best delivery time window 20 minutes / 40 minutes away from
+            order placement time.
+            ASAP deliveries can be supported in two cases:
+            <ol>
+              <li>We have enough time to spare on an existing route that a new order can be fit into it without making
+                the rest of the deliveries late.</li>
+              <li>We have a free driver who can go and deliver the order.</li>
+            </ol>
+          </li>
+          <li>
+            <b>Our Work:</b>
+            For supporting both cases, in our model, we introduce a concept called <b>ASAPSocket</b>. ASAPSockets are
+            calculated for every route leg (a route leg is a segment of a route with fixed start and end locations;
+            these locations are either hub address or shipment address).
+            The ASAPSocket class contains:
+            <ul>
+              <li>
+                <b>Slack time</b>: The maximum time that can be spared for delivering an ASAP order within this route
+                leg without making the next shipments late.
+              </li>
+              <li>
+                <b>Slack capacity</b>: The maximum weight and volume capacity the ASAP shipment can have without
+                overloading the route vehicle.
+              </li>
+              <li>
+                <b>Areas</b>: Polygons representing locations on the map where an ASAP order can be placed for this
+                route leg.
+              </li>
+              <li>
+                <b>Delivery time</b>: Estimated delivery time of an ASAP order placed within this route leg if the
+                customer address is inside the calculated areas.
+              </li>
+            </ul>
+            Along with ASAPSockets for route legs, we also calculate ASAPSockets for free drivers. These sockets consist
+            of the areas around the hub where a driver can deliver an ASAP order after completing one route and before
+            starting another.
+          </li>
+          <li>
+            <b>My Contribution:</b>
+            I am currently leading the project. The design and implementation of the ASAPSocket algorithms are live. The
+            backend integration is work in progress.
+          </li>
+          <li>
+            <b>Demonstration:</b>
+            Here is a demonstration of the ASAPSockets for the previous route legs and free drivers.
+            <div class="images">
+              <figure>
+                <img src="./assets/img/CycleASAP.png" alt="Cycle" />
+                <figcaption><b>Fig 5:</b> Cycle ASAP Sockets</figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/BikeASAP.png" alt="Bike" />
+                <figcaption><b>Fig 6:</b> Bike ASAP Sockets</figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/VanASAP.png" alt="Van" />
+                <figcaption><b>Fig 7:</b> Van ASAP Sockets</figcaption>
+              </figure>
+              <figure>
+                <img src="./assets/img/FreeDriverASAP.png" alt="Free Driver" />
+                <figcaption><b>Fig 8:</b> Free Driver ASAP Socket</figcaption>
+              </figure>
+            </div>
+            <br>
+            Different ASAP Socket colors represent different route legs. In <b>Fig 6</b>, there's no ASAP Socket for the
+            bike route because it is already a late shipment. In <b>Fig 8</b>, the ASAP Socket for the free bike driver
+            is shown.
+          </li>
+        </ul>
+
+        <h4><b>Others</b></h4>
+        <ul>
+          <li style="margin-bottom: 5px;">
+            <b>Traffic Estimation:</b> We use the open-source routing engine <a
+              href="https://valhalla.github.io/valhalla/" target="_blank" rel="noopener noreferrer">Valhalla</a> for
+            estimating the travel distance and time between different locations. Valhalla is built on top of <a
+              href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> data. To
+            get accurate travel time estimates, we need to input road speeds at 5-minute intervals for each day of the
+            week and for each road segment. To collect this data, we had a team who manually collected the data from
+            Google Maps for each road segment. On top of that, we polled the Google Maps API for the traffic data for
+            important road segments. Using this data, we interpolated the road speeds for each 5-minute interval for
+            each road segment. This data is then fed to the Valhalla routing engine to get the travel time estimates.
+          </li>
+          <li style="margin-bottom: 5px;"><b>Dispatcher Task Duration Estimation:</b>
+          Trained a <b>Machine Learning</b> model that takes different features of a task, such as the type of task,
+          the number of products, the weights of the products, etc., and predicts the duration of the task so that the
+          algorithm and the picker incentive system can use it. The model is trained on the historical data of the
+          tasks that were completed in the warehouse.</li>
+
+          <li style="margin-bottom: 5px;">
+            <b>Dispatcher Picker Incentive System:</b>
+            Developed an algorithm that takes the performance of the pickers, the predicted duration of all the tasks in
+            a day, and the predicted duration of the tasks that the picker completed in that day, and assigns a score to
+            each picker. The incentive system uses the score to give incentives to the pickers.
+          </li>
+
+          <li>
+            <b>Audit Tasks:</b>
+            Developed a new type of task called Audit Task that is assigned to pickers to audit a shelf in the
+            warehouse. The picker has to go to the shelf, input the products on the shelf, and the system will compare
+            the inputted products with the products that are supposed to be on the shelf. This is used to keep track of
+            the products in the warehouse and to find any discrepancies.
+          </li>
+        </ul>
+
+        <!-- <ul>
           <li> Developed last-mile routing algorithm that assigns routes of multiple orders to a delivery person using
             techniques such
             as clustering, TSP, Simulated Annealing, and Tabu Search. This increased the on-time delivery rate from 60%
             to 80%.
           </li>
-          <li> Developed automated picking assignment for warehouse pickers that assigns tasks based on task priority
-            and movement allowing parallelization of tasks which improved the on-time dispatch rate from 80% to 99%.
-          </li>
           <li> Improved travel time estimates by integrating historical traffic data, reducing errors from 90% to 13%.
           </li>
-          <li> Implemented picker incentive system that considers their daily performance and the predicted duration of
-            tasks, resulting in a 33% improvement in overall picker performance. </li>
-          <li> Developed auditing system for warehouse shelves, reducing product quantity mismatches by 12%. </li>
-        </ul>
-        </p>
+        </ul> -->
+
       </div>
 
     </section><!-- /Experience Section -->
@@ -474,9 +720,10 @@
                     </div>
                     <p class="blog-text">
                       A deep learning model for image super-resolution tasks that can upscale images by 4x while
-                      maintaining high quality. The model is trained on the DIV2K dataset and uses a mixture of FSRCNN
+                      maintaining high quality. The model is trained from scratch on the DIV2K dataset and uses a
+                      mixture of FSRCNN
                       and
-                      Channel Attention with Residual Blocks for better results. Samples can be found in the github
+                      Channel Attention with Residual Blocks. Samples can be found in the given github
                       repository.
                     </p>
                   </div>
@@ -596,7 +843,8 @@
                       A Convolutional Neural Network (CNN) implemented from scratch including the forward and backward
                       propagation steps using numpy. The model is trained on a dataset of Bangla handwritten digits
                       and
-                      achieves an accuracy of approximately 90% on the test dataset. Lenet architecture was used to
+                      achieves an accuracy of approximately 80% to 90% on the test datasets. Lenet architecture was used
+                      to
                       train
                       and predict the model.
                     </p>
@@ -677,7 +925,8 @@
           <p class="timeline-text-bulletpoint">
             For the first one, we solved it by using Segment Tree data structure, hashing and some insightful
             observations for transformation of string. For the later, we improved previously known matching solution by
-            incorporating Fast Fourier Transform (FFT). Our solution is also parallelizable on multi-core machine and
+            incorporating Fast Fourier Transform (FFT) and Minimum cost bipartite matching. Our solution is also
+            parallelizable on multi-core machine and
             does not depend on value of tolerance.
           </p>
       </div>
@@ -685,11 +934,10 @@
     </section><!-- /Experience Section -->
 
     <!-- Lessons Section -->
-    <section id="lessons" class="resume section">
-      <!-- Lessons Title -->
+    <!-- <section id="lessons" class="resume section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Lessons</h2>
-      </div><!-- End Section Title -->
+      </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <p>
           Here's some things I've learned from my experience over the years:
@@ -714,12 +962,11 @@
           </li>
         </ul>
         </p>
-      </div>
-
-    </section><!-- /Experience Section -->
+      </div> -->
+    <!-- </section> -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section light-background">
+    <section id="contact" class="contact section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact</h2>

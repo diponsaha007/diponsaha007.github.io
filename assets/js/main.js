@@ -225,5 +225,51 @@
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
-
 })();
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Function to handle entering full screen
+  function openFullscreen(element) {
+    const fullscreenElement = document.createElement('div');
+    fullscreenElement.style.position = 'fixed';
+    fullscreenElement.style.top = '0';
+    fullscreenElement.style.left = '0';
+    fullscreenElement.style.width = '100vw';
+    fullscreenElement.style.height = '100vh';
+    fullscreenElement.style.backgroundColor = 'rgba(0,0,0,0.8)';
+    fullscreenElement.style.display = 'flex';
+    fullscreenElement.style.justifyContent = 'center';
+    fullscreenElement.style.alignItems = 'center';
+    fullscreenElement.style.zIndex = '10000';
+    fullscreenElement.style.cursor = 'pointer';
+    fullscreenElement.style.overflow = 'hidden';
+
+    const img = document.createElement('img');
+    img.src = element.src;
+    img.style.maxWidth = '100%';
+    img.style.maxHeight = '100%';
+    img.style.objectFit = 'contain';
+
+    fullscreenElement.appendChild(img);
+    fullscreenElement.addEventListener('click', () => {
+      document.body.removeChild(fullscreenElement);
+    });
+
+    document.body.appendChild(fullscreenElement);
+  }
+
+  // Attach click event listeners to each image
+  const images = document.querySelectorAll('.images img');
+  images.forEach(img => {
+    img.addEventListener('click', (event) => {
+      openFullscreen(img);
+    });
+  });
+
+  const images2 = document.querySelectorAll('.images2 img');
+  images2.forEach(img => {
+    img.addEventListener('click', (event) => {
+      openFullscreen(img);
+    });
+  });
+});
