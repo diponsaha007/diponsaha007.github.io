@@ -1432,25 +1432,6 @@ section,
   list-style: none;
 }
 
-/* .images2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: -25px;
-  border: 10px solid var(--black-70);
-}
-
-img {
-  width: 30%;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
-  transition: transform ease-in-out 0.5s;
-  cursor: pointer;
-} */
-
-
 .images {
   display: flex;
   justify-content: space-between;
